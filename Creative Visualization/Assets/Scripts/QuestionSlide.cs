@@ -41,8 +41,8 @@ public class QuestionSlide : Slide
         yield return new WaitForSeconds(6f);
         MainSceneManager.current.Dialogue("I'm sorry, but I don't have time to go into more detail right now, but I hope this has helped you out!");
         yield return StartCoroutine(WaitForAdvance());
+        Application.Quit();
         MainSceneManager.current.NextSlide();
-
     }
 
     protected virtual string GetNextDialogue()
